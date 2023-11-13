@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  h1 {
+            border-bottom: 2px solid #4ca3f0; /* You can adjust the width and color as needed */
+            /*padding: 10px; / Optional: Add padding for better visual appearance */
+            text-align: center; 
+            color: blue; 
+            font-weight: 800;
+            background-color: rgb(rgb(167, 206, 230), rgb(181, 235, 242), rgb(179, 217, 240));
+        }
+    </style>
+    <title>Results</title>
+    
+</head>
+
+<body>
+
+    <h1>GitHub Analytics Dashboard</h1>
+
+    <br>
+    <br>
+
+<!-- Display Contributor Activity graph -->
+<p style="font-family: 'Times New Roman', Times, serif; font-size: x-large; font-weight: 100; color: blueviolet; text-align: left; ">Contributor Activity Plot</p>
+<img src="data:image/png;base64, {{ image_base64_contributor }}" alt="Contributor Activity" class="center">
+
+<!-- Display Pull Request Trends graph -->
+<p style="font-family: 'Times New Roman', Times, serif; font-size: x-large; font-weight: 100; color: blueviolet; text-align: left; ">Pull Request Trends Plot</p>
+<img src="data:image/png;base64, {{ image_base64_pull_request }}" alt="Pull Request Trends" class="center">
+
+<!-- Display Commit Frequency graph -->
+<p style="font-family: 'Times New Roman', Times, serif; font-size: x-large; font-weight: 100; color: blueviolet; text-align: left; ">Commit Frequency Plot</p>
+<img src="data:image/png;base64, {{ image_base64_commit_frequency }}" alt="Commit Frequency" class="center">
+
+<br>
+<br>
+<!-- Display Average Resolution Time -->
+<p id="issue" style="font-family: 'Times New Roman', Times, serif; font-size: x-large; font-weight: 100; color: blueviolet; text-align: left; ">
+    
+    Issue Resolution Time: 
+    {{ avg_resolution_time }} seconds</p>
+
+</body>
+</html>

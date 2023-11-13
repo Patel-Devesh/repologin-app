@@ -1,0 +1,19 @@
+body{
+    background-image: url('img2.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+
+}
+/* Existing CSS rules */
+.date-selector {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* New CSS rule */
+.date-selector label {
+    display: block;
+    text-align: center;
+}
